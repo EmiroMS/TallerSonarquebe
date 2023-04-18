@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'jacoco'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    //maven {url 'https://artifactory.apps.bancolombia.com/maven-bancolombia'}
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+
+
+}
+
+test {
+    useJUnitPlatform()
+    finalizedBy jacocoTestReport
+}
+
+jacoco{
+    toolVersion("0.8.7")
+}
