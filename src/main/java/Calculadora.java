@@ -23,9 +23,4 @@ public double division(double num1, int num2) {
     return resultado;
 }
 
-public static void main(String[] args) {
-    Calculadora calc = new Calculadora();
-    calc.suma(2, 3);
-    System.out.println("Resultado: " + resultado);
-}
 
