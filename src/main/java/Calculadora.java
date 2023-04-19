@@ -1,20 +1,27 @@
 public class Calculadora {
 
-    // Nombres de métodos poco descriptivos
-    public double s(double num1, int num2){
-        return num1+num2;
+    public static double resultado;
+
+    public Calculadora() {
+        resultado = 0;
     }
 
-    // Nombres de métodos poco descriptivos
-    public double m(double num1, int num2){
-        return num1*num2;
+    public double suma(double num1, int num2) {
+        resultado = num1 + num2;
+        return resultado;
     }
 
-    // Método de división sin manejo de excepciones
-    public double d(double num1, int num2){
-        // Se divide un número por cero sin manejar la excepción
-        return num1/num2;
+    public double multiplicacion(double num1, int num2) {
+        resultado = num1 * num2;
+        return resultado;
     }
 
-    // Falta de comentarios para ayudar a entender el código
+    public double division(double num1, int num2) {
+        try {
+            resultado = num1 / num2;
+        } catch (Exception e) {
+            System.out.println("Error al dividir por cero");
+        }
+        return resultado;
+    }
 }
