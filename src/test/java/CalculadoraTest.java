@@ -17,18 +17,14 @@ public class CalculadoraTest {
     // Prueba de multiplicación con nombres de métodos poco descriptivos
     @Test
     void mul() {
-        assertEquals(20, c.m(4, 5));
+        assertEquals(20, c.multiplicacion(4,6));
     }
 
     // Prueba de división por cero
     @Test
     void div() {
         // Se divide un número por cero
-        assertEquals(8, c.d(14, 0));
+        assertEquals(8, c.division(14, 0));
     }
 
-    // Método de división sin manejo de excepciones
-    public double d(double num1, int num2) {
-        return num1/num2;
-    }
 }

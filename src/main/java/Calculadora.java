@@ -18,9 +18,12 @@ public class Calculadora {
 
     public double division(double num1, int num2) {
         try {
+            if (num2 == 0) {
+                throw new Exception("Error: no se puede dividir por cero"); // Se lanza una excepción personalizada
+            }
             resultado = num1 / num2;
         } catch (Exception e) {
-            System.out.println("Error al dividir por cero");
+            System.out.println(e.getMessage()); // Se muestra el mensaje de la excepción
         }
         return resultado;
     }
