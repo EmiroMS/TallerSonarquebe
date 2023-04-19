@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class CalculadoraTest {
+class CalculadoraTest {
 
     // Nombres de métodos y variables poco descriptivos
     Calculadora c;
